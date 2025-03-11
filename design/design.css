@@ -1,0 +1,231 @@
+:root {
+    --Red: hsl(0, 100%, 68%);
+    --Very-dark-blue: hsl(230, 29%, 20%);
+    --Dark-grayish-blue: hsl(230, 11%, 40%);
+    --Grayish-blue: hsl(231, 7%, 65%);
+    --Light-grayish-blue: hsl(207, 33%, 95%);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barlow-Condensed;
+    src: url(../fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+}
+
+span {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    background-color: var(--Light-grayish-blue);
+    border-radius: 75px;
+    transform: translateX(40rem);
+    z-index: 0;
+}
+
+body {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1;
+}
+
+.links p {
+    color: var(--Very-dark-blue);
+    font-weight: bold;
+    font-family: Barlow-Condensed;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: text-decoration 0.3s ease;
+}
+
+.links p:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+
+#login {
+    color: var(--Grayish-blue);
+    transition: text-decoration 0.3s ease;
+}
+
+#login:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+
+.littleCercle {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background-color: var(--Grayish-blue);
+    margin: 0;
+}
+
+main {
+    width: 80%;
+    height: auto;
+    font-family: Barlow-Condensed;
+    display: flex;
+    flex-direction: row;
+}
+
+#devices {
+    position: absolute;
+    transform: translateX(15rem);
+    z-index: 1;
+}
+
+.mainUp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.new {
+    background-color: var(--Very-dark-blue);
+    color: var(--Light-grayish-blue);
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    border-radius: 15px;
+}
+
+.monograph {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--Grayish-blue);
+}
+
+h1 {
+    font-weight: bolder;
+    font-family: Barlow-Condensed;
+    text-transform: uppercase;
+    color: var(--Very-dark-blue);
+    font-size: 50px;
+    max-width: 350px;
+}
+
+.mainText {
+    color: var(--Grayish-blue);
+    max-width: 225px;
+}
+
+.mainFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.schedule {
+    color: var(--Light-grayish-blue);
+    font-weight: bold;
+    background-color: var(--Red);
+    width: 175px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.attribution, .attribution a {
+    color: var(--Very-dark-blue);
+    font-weight: bolder;
+    font-size: 12.5px;
+    transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+    color: var(--Red);
+}
+
+@media (min-width: 350px) and (max-width: 750px) {
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 300px;
+      transform: translateX(0);
+      border-radius: 0 0 0 75px;
+    }
+
+    .links {
+        display: none;
+    }
+    
+    #devices {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      transform: translateX(0) scale(0.8);
+      max-width: 100%;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+    
+    main {
+      flex-direction: column;
+      margin-top: 320px;
+      width: 90%;
+    }
+    
+    header {
+      width: 90%;
+      margin-top: 20px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      max-width: 100%;
+    }
+    
+    .mainText {
+      max-width: 100%;
+    }
+    
+    .links {
+      gap: 1rem;
+    }
+    
+    .links p {
+      font-size: 14px;
+    }
+
+    .attribution, .attribution a {
+        text-align: center;
+    }
+  }
